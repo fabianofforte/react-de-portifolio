@@ -15,11 +15,11 @@ import RadialGradientBackground from "../backgrounds/RadialGradientBackground";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      <RadialGradientBackground variant="hero" />
+      {/*<RadialGradientBackground variant="hero" />*/}
       {/* Contant Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Contnt */}
+          {/* Left Column - Content */}
           <div className="text-left">
             <FadeIn delay={0}>
               <div className="inline-flex items-center gap-2.5 px-[18px] py-[11px] mb-8 bg-linear-to-r from-primary/10 via-primary/15 to-primary/20 border border-primary/20 rounded-full">
@@ -32,31 +32,68 @@ const Hero = () => {
             <FadeIn delay={100}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-6 leading-tight">React.js Developer Portifolio</h1>
             </FadeIn>
-            
-            44:10
             <FadeIn delay={200}>
-              <p className="">
+              <p className="text-lg text-white/70 max-w-[550px] mb-8">
                 Crio aplicações web modernas e escaláveis com React, JavaScript
                 e tecnologias de ponta. Mais do que código: transformo ideias em
                 experiências digitais que engajam, convertem e performam.
               </p>
             </FadeIn>
             <FadeIn delay={300}>
-              <button onClick={() => scrollToSection("contact")} className="">
-                <div className="">Entre em contato</div>
+              <button onClick={() => scrollToSection("contact")} className="inline-flex items-center gap-0 mb-12 group">
+                <div className="relative z-10 bg-white text-[#212121] rounded-[17px] px-[26px] py-[13px] text-base font-medium border border-white">Entre em contato</div>
               </button>
             </FadeIn>
             <FadeIn delay={400}>
-              <div className="">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-full">
                 {STATS.map((stat, index) => (
-                  <div key={index} className="">
-                    <div className="">{stat.value}</div>
-                    <p className="">{stat.label}</p>
+                  <div key={index} className="text-left border-r border-white/50 pr-10 last:border-r-0">
+                    <div className="text-2xl font-normal text-primary mb-[8px] font-mono">{stat.value}</div>
+                    <p className="text-sm text-white leading-snug">{stat.label}</p>
                   </div>
                 ))}
               </div>
             </FadeIn>
           </div>
+          {/* Right Colum - Developer Image */}
+          <FadeIn delay={200}>
+            <div className="relative">
+                <div className="relative overflow-hidden rounded-2xl aspect-4/5 max-w-[500px] ml-auto group">
+                  <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                    <div className="absolute inset-[-2px] bg-linear-to-r from-primary/20 via-primary/10 to-primary animate-spin-slow rounded-2xl">
+
+                    </div>
+                  </div>
+                  {/* Image Container */}
+                  <div className="">
+                    <img src="/images.jpg" alt="developer at work" className="w-full h-full object-cover" />
+                  </div>
+                  47:41
+                  {/* Technology Logos */}
+                  <div className="">
+                    <FadeIn delay={500}>
+                      <div className="">
+                        <div className="">
+                          <SiReact className=""/>
+                        </div>
+                        <div className="">
+                          <SiNextdotjs className="" />
+                        </div>
+                        <div className="">
+                          <SiNodedotjs className="" />
+                        </div>
+                        <div className="">
+                          <SiTailwindcss className="" />
+                        </div>
+                        <div className="">
+                          <SiMongodb className="" />
+                        </div>
+                      </div>
+                    </FadeIn>
+                  </div>
+                </div>
+            </div>
+          </FadeIn>
         </div>
       </div>
     </section>
