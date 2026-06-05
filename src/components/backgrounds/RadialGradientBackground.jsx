@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { MdOpacity } from "react-icons/md";
 
@@ -46,11 +47,36 @@ const RadialGradientBackground = ({variant='hero', gradients=[]}) => {
     ],
     about: [
       {
-        53:12
-      }
-    ]
-  }
-  return <div>RadialGradientBackground</div>;
+        position: 'bottom-0 left-[75%]',
+        size: 'w-[700px] h-[700px]',
+        colors: [
+          { color: 'rgba(141, 255, 105, 0.25)', stop: '100%' },
+          { color: 'rgba(141, 255, 105, 0.45)', stop: '100%' },
+          { color: 'rgba(141, 255, 105, 0.5)', stop: '100%' },
+          { color: 'rgba(141, 255, 105, 0.45)', stop: '100%' },
+          { color: 'rgba(141, 255, 105, 0.25)', stop: '100%' },
+        ],
+        blur: '0px',
+        opacity: 0.5,
+      },
+    ],
+  };
+
+  const activeGradients = variant === 'custom' ? gradients : variants[variant] || variants.hero;
+
+  const generateGradient = (colors) => {
+    const colorStops = colors.map(({ color, stop }) => `${color} ${stop}`).join(',');
+    return `radial-gradient(circle at center, transparent 0%, transparent 30%, ${colorStops}, transparent 60%, transparent 100% )`;
+  };
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {activeGradients.map((gradient, index) =>(
+        <div key={index} className={`absolute ${gradient.position} ${gradient.size} rounded-full`} style={{background: generateGradient(gradient.colors),
+          filter: `blur(${gradient.blur})`, opacity: gradient.opacity,}} />
+      ))}
+    </div>
+  );
 };
 
 export default RadialGradientBackground;
