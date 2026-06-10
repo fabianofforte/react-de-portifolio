@@ -6,9 +6,9 @@ export const PERSONAL_INFO = {
     tagline: 'Crafting seamless digital experiences with modern web technologies',
     resume: '/resume.pdf',
     bio: [
-        "I'm a passionate React Developer with over 3 years of experiences",
-        "I'm a passionate React Developer with over 3 years of experiences",
-        "I'm a passionate React Developer with over 3 years of experiences"
+        "Sou um desenvolvedor React apaixonado, com mais de 3 anos de experiência na criação de aplicações web escaláveis e de alto desempenho. Especializo-me em construir interfaces intuitivas que unem design refinado e funcionalidade excepcional.",
+        "Minha atuação abrange todo o ecossistema Front-End, React, Next.js, TypeScript e frameworks CSS modernos. Tenho o compromisso de escrever código limpo, de fácil manutenção e de me manter atualizado com as mais recentes tecnologias web.",
+        "Quando não estou programando, você me encontrará contribuindo com projetos open-source, escrevendo artigos técnicos ou explorando novas tendências de design."
     ]
 };
 
