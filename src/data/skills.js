@@ -8,77 +8,77 @@ export const skills = [
     },
     {
         id: 2,
-        name: 'React.js',
-        icon: 'Code2',
+        name: 'JavaScript',
+        icon: 'FileCode',
         level: 'Expert',
-        experience: '3+ years'
+        experience: '4+ years'
     },
     {
         id: 3,
-        name: 'React.js',
-        icon: 'Code2',
-        level: 'Expert',
-        experience: '3+ years'
+        name: 'TypeScript',
+        icon: 'FileType',
+        level: 'Advanced',
+        experience: '2+ years'
     },
     {
         id: 4,
-        name: 'React.js',
-        icon: 'Code2',
-        level: 'Expert',
-        experience: '3+ years'
+        name: 'Next.js',
+        icon: 'Zap',
+        level: 'Advanced',
+        experience: '2+ years'
     },
     {
         id: 5,
-        name: 'React.js',
-        icon: 'Code2',
+        name: 'Tailwind CSS',
+        icon: 'Palette',
         level: 'Expert',
         experience: '3+ years'
     },
     {
         id: 6,
-        name: 'React.js',
-        icon: 'Code2',
-        level: 'Expert',
-        experience: '3+ years'
+        name: 'Node.js',
+        icon: 'Server',
+        level: 'Intermediate',
+        experience: '2+ years'
     },
     {
         id: 7,
-        name: 'React.js',
-        icon: 'Code2',
-        level: 'Expert',
+        name: 'Git & GitHub',
+        icon: 'GitBranched',
+        level: 'Advanced',
         experience: '3+ years'
     },
     {
         id: 8,
-        name: 'React.js',
-        icon: 'Code2',
-        level: 'Expert',
-        experience: '3+ years'
+        name: 'Redux',
+        icon: 'Database',
+        level: 'Advanced',
+        experience: '2+ years'
     },
     {
         id: 9,
-        name: 'React.js',
+        name: 'REST APIs',
         icon: 'Code2',
         level: 'Expert',
         experience: '3+ years'
     },
     {
         id: 10,
-        name: 'React.js',
+        name: 'Figma',
         icon: 'Code2',
         level: 'Expert',
         experience: '3+ years'
     },
     {
         id: 11,
-        name: 'React.js',
+        name: 'Vite',
         icon: 'Code2',
         level: 'Expert',
         experience: '3+ years'
     },
     {
         id: 12,
-        name: 'React.js',
+        name: 'Responsive Design',
         icon: 'Code2',
         level: 'Expert',
         experience: '3+ years'

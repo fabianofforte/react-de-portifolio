@@ -4,7 +4,7 @@ export const PERSONAL_INFO = {
     email: 'fabiano.fforte@gmail.com',
     location: 'Viamão, RS',
     tagline: 'Crafting seamless digital experiences with modern web technologies',
-    resume: '/resume.pdf',
+    resume: '/FabianoFerreira.pdf',
     bio: [
         "Sou um desenvolvedor React apaixonado, com mais de 3 anos de experiência na criação de aplicações web escaláveis e de alto desempenho. Especializo-me em construir interfaces intuitivas que unem design refinado e funcionalidade excepcional.",
         "Minha atuação abrange todo o ecossistema Front-End, React, Next.js, TypeScript e frameworks CSS modernos. Tenho o compromisso de escrever código limpo, de fácil manutenção e de me manter atualizado com as mais recentes tecnologias web.",
@@ -13,10 +13,9 @@ export const PERSONAL_INFO = {
 };
 
 export const SOCIAL_LINKS = {
-    github: 'https:://github.com',
-    linkedin: 'https:://linkedin.com',
-    twitter: 'https::/twitter.com',
-    dribbble: 'https:://dribbble.com'
+    github: 'https://github.com/fabianofforte',
+    linkedin: 'https://www.linkedin.com/in/fabianofferreira/',
+    twitter: 'https://x.com/fabianoffort'
 };
 
 export const STATS = [
