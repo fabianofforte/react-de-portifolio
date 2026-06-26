@@ -41,15 +41,96 @@ const Projects = () => {
     scrollToIndex(newIndex);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const prevSlide = () => {
     const newIndex = Math.max(currentIndex - 1, 0);
     scrollToIndex(newIndex);
   };
 
   // Category icons Mapping
+  // eslint-disable-next-line no-unused-vars
+  const categoryIcons = {
+    'All': Target,
+    'Web Apps': Globe,
+    'UI Components': Palette,
+    'Full Stack': Zap,
+  };
+  
   
   return (
-    <div>Projects</div>
+    <section id="" className="">
+      <div className="">
+        <div className="" />
+        <div className="" />
+        <div className="" />
+      </div>
+      <div className="">
+        <FadeIn delay={0}>
+          <div className="">
+            <div className="">
+              <Briefcase className="" />
+              <span className="">Minha Assinatura Digital</span>
+            </div>
+            <h2 className="">
+              Projetos em Alta
+            </h2>
+            <p className="">
+              Do conceito à entrega: transformo ideias em interfaces poderosas que vendem, encantam e fidelizam. Dá uma olhada no que já construí!
+            </p>
+          </div>
+        </FadeIn>
+        {/* Category Filter */}
+        <FadeIn delay={100}>
+          <div className="">
+            {categories.map((category) => (
+              <button key={category} onClick={() => handleCategoryChange(category)} className={`group relative px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeCategory === category ? 'text-white' : 'text-white/60 hover:text-white'}`}>
+                <div className={`absolute inset-0 rounded-full transition-all duration-300 ${activeCategory === category ? 'bg-primary/10 opacity-100' : 'bg-white/5 border border-white/10 group-hover:bg-white/10'}`} />
+                <div className="">
+                  {React.createElement(categoryIcons[category], { className: "w-4 h-4" })}
+                  <span className="">{category}</span>
+                </div>
+                {activeCategory === category && (
+                  <div className="" />
+                )}
+              </button>
+            ))}
+          </div>
+        </FadeIn>
+      {/* Projetos Carrosel */}
+      <FadeIn delay={200}>
+        <div className="">
+          <div ref={scrollContainerRef} className="">
+            <div className="">
+              {filteredProjects.map((project, index) => (
+                <div key={project.id} className="">
+                  <ProjectCard project={project} />
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Navegação Arrows */}
+          {filteredProjects.length > 3 && (
+            <>
+            <button onClick={prevSlide} disabled={currentIndex === 0} className="" aria-label="Previus projects">
+              <ChevronLeft className="" />
+            </button>
+            <button onClick={nextSlide} disabled={currentIndex >= filteredProjects.length - 3} className="" aria-label="Next projects">
+              <ChevronRight className="" />
+            </button>
+            </>
+          )}
+          {/* Navegação Dots */}
+          {filteredProjects.length > 3 && (
+            <div className="">
+              {Array.from({ length: Math.max(0, filteredProjects.length - 2) }).map((_, index) => (
+                <button key={index} onClick={() => scrollToIndex(index)} className={`transition-all duration-300 rounded-full ${index === currentIndex ? 'bg-primary w-6 h-2' : 'bg-white/30 w-2 h-2 hover:bg-white/50'}`} aria-label={`Go to slide ${index + 1}`} />
+              ))}
+            </div>
+          )}
+        </div>
+      </FadeIn>
+      </div>
+    </section> {/* 1:27:26 */}
   )
 }
 
