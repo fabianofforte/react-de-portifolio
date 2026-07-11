@@ -4,21 +4,21 @@ export const services = [
     icon: "Layout",
     title: "Frontend Development",
     description:
-      "Building responsive and performant web applications using React, Next.js, and Java",
+      "Building responsive and performant web applications using React, Next.js, and modern JavaScript frameworks with pixel-perfect designs.",
   },
   {
     id: 2,
-    icon: "Layout",
-    title: "Frontend Development",
+    icon: "Monitor-Smartphone",
+    title: "Responsive Design",
     description:
-      "Building responsive and performant web applications using React, Next.js, and Java",
+      "Creating mobile-first, responsive interfaces that work seamlessly across all devices and screen sizes with exceptional user experiences.",
   },
   {
     id: 3,
-    icon: "Layout",
-    title: "Frontend Development",
+    icon: "Palette",
+    title: "UI/UX Design",
     description:
-      "Building responsive and performant web applications using React, Next.js, and Java",
+      "Designing intuitive and visually appealing user interfaces with a focus on usability accessibility, and modern design principles.",
   },
   {
     id: 4,
