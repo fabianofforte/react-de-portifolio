@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
 import { services } from '../../data/services';
 import * as Icons from "lucide-react";
 import { Wrench } from 'lucide-react';
@@ -49,22 +47,22 @@ function Services() {
             );
           })}
         </div>
-        <div className=""> {/* 1:44:03 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.slice(2).map((service, index) =>{
             const IconComponent = Icons[service.icon] || Icons.Code2;
             return (
               <FadeIn key={service.id} delay={300 + index * 100}>
-                <div className="">
-                  <div className="">
-                    <div className="">
-                      <IconComponent className="" />
+                <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
+                  <div className="mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-6 h-6 text-primary" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="">{service.title}</h3>
-                    <p className="">{service.description}</p>
+                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A8FF8D] transition-colors duration-300">{service.title}</h3>
+                    <p className="text-sm text-white/60 leading-relaxed line-clamp-3">{service.description}</p>
                   </div>
-                  <div className="" />
+                  <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/0 group-hover:from-primary/5 group-hover:to-primary/5 transition-all duration-300 pointer-events-none" />
                 </div>
               </FadeIn>
             );
