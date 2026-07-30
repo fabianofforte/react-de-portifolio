@@ -2,7 +2,7 @@ export const PERSONAL_INFO = {
     name: 'Fabiano Ferreira',
     title: 'Developer Backend PHP Laravel',
     email: 'fabiano.fforte@gmail.com',
-    location: 'Viamão, RS',
+    location: 'Viamão, Brasil',
     tagline: 'Crafting seamless digital experiences with modern web technologies',
     resume: '/FabianoFerreira.pdf',
     bio: [
