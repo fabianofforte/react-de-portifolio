@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Mail,
   MapPin,
@@ -126,34 +126,34 @@ const Contact = () => {
                                         <p className="text-sm text-white/60 mb-1">
                                             Email
                                         </p>
-                                        <a href={`mailto:${PERSONAL_INFO.email}`} className=""> {/* 2:10:40 */}
+                                        <a href={`mailto:${PERSONAL_INFO.email}`} className="text-white hover:text-[#A8FFD] transition-colors font-medium">
                                             {PERSONAL_INFO.email}
                                         </a>
                                     </div>
                                 </div>
-                                <div className="" />
+                                <div className="absolute inset-0 bg-linear-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-primary/5 rounded-2xl transition-all duration-300 pointer-events-none" />
                             </div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <MapPin className="" />
+                            <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
+                                <div className="flex items-start gap-4">
+                                    <div className="p-3 bg-linear-to-br from-primary/20 to-primary/20 border border-primary/30 rounded-xl">
+                                        <MapPin className="w-6 h-6 text-primary" />
                                     </div>
-                                    <div className="">
-                                        <p className="">Localização</p>
-                                        <p className="">{PERSONAL_INFO.location}</p>
+                                    <div className="flex-1">
+                                        <p className="text-sm text-white/60 mb-1">Localização</p>
+                                        <p className="text-white font-medium">{PERSONAL_INFO.location}</p>
                                     </div>
                                 </div>
                                 <div />
                             </div>
                         </div>
                         <div>
-                            <p className="">Connect with me</p>
-                            <div className="">
+                            <p className="text-sm text-white/60 mb-4">Conecte-se Comigo</p>
+                            <div className="flex gap-4">
                                 {Object.entries(SOCIAL_LINKS).slice(0, 3).map(([platform, url]) => {
                                     const Icon = socialIcons[platform];
                                     return Icon ? (
-                                        <a key={platform} href={url} target="_blank" rel="noopener noreferrer" className="">
-                                            <Icon className="" />
+                                        <a key={platform} href={url} target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-primary/50 hover:scale-110 transition-all duration-300 group">
+                                            <Icon className="w-6 h-6 text-white/60 group-hover:text-primary transition-colors" />
                                         </a>
                                     ) : null;
                                 })}
